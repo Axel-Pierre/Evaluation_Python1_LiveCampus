@@ -1,0 +1,39 @@
+ /* epi_table = tables.find_all('span',class_="calendrier_episodes")
+        for episode in epi_table :
+            episode_name = episode.find_all('a')[0].text
+            episode_num = episode.find_all('a')[1].text.split('.')[1]
+            saison = episode.find_all('a')[1].text.split('.')[0]
+            date = episode.find_all('a')[1].get('href').split('-')[2]
+            country = tables.find_all('a')[0].find_previous_sibling()
+            data.append({'name' : episode_name,'epi_num': episode_num,'saison' : saison, "date" : date,'country' : country })
+        return country */
+
+         cor.execute('''
+         CREATE TABLE IF NOT EXISTS duration (
+        id INTEGER PRIMARY KEY,
+        episose_time INT,
+         CONSTRAINT duration_time FOREIGN KEY (id) REFERENCES episode (id)                     
+             )
+                ''')
+        cur.execute('''
+         CREATE TABLE IF NOT EXISTS duration (
+        id INTEGER PRIMARY KEY,
+        episode_time INT,
+        CONSTRAINT duration_time FOREIGN KEY (id) REFERENCES episode (id)                       
+             )
+                ''')
+          cur.execute('''
+        DROP TABLE  duration''')
+
+          def unique(list1):
+ 
+         # insert the list to the set
+            list_set = set(list1)
+            # convert the set to the list
+            unique_list = (list(list_set))
+            for x in unique_list:
+                unique_channel.append(x)
+
+        channel= []
+        unique_channel = []
+        i = 0
